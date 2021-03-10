@@ -42,26 +42,23 @@ A newline-list of dates with a trailing quotation (lame). These are the dates yo
 
 A newline-list of times with a trailing quotation (lame). When you run this script, we generate 15 timeslots for each time listed in input/times.csv and in our output times.csv file the data will look like:
 
-<sub><sup>
-"Key","Date","Name","Times"
-"rgwhkg4jqmt440od","rs51fab4khga41gi","Slot 1","08:00:00"
-"rkwz02rbqi02i7nk","rs51fab4khga41gi","Slot 2","08:00:00"
-"8npy4z9sdelyb3r5","rs51fab4khga41gi","Slot 3","08:00:00"
-...
-"frjh5qawz492smsb","rs51fab4khga41gi","Slot 14","08:00:00"
-"5jy35ohkt8hq97ac","rs51fab4khga41gi","Slot 15","08:00:00"
-"4pgpp0am52tg7wvo","rs51fab4khga41gi","Slot 1","08:30:00"
-"jsnptduedakti4dl","rs51fab4khga41gi","Slot 2","08:30:00"
-...
-"2wvc3w3551jhdq6v","rs51fab4khga41gi","Slot 14","08:30:00"
-"uhayafyqrf5a8jmo","rs51fab4khga41gi","Slot 15","08:30:00"
-"n9bvkgggjxo7hhzb","rs51fab4khga41gi","Slot 1","09:00:00"
-"oxozdeo23huzpvfc","rs51fab4khga41gi","Slot 2","09:00:00"
-"31pcnyb1q9z0fiaz","rs51fab4khga41gi","Slot 3","09:00:00"
-...
-"vs4u1v5swy13oov4","rs51fab4khga41gi","Slot 14","09:00:00"
-"3nl701m3bkvjmr02","rs51fab4khga41gi","Slot 15","09:00:00"
-</sup></sub>
+<sub><sup>"Key","Date","Name","Times"</sup></sub>
+<sub><sup>"rgwhkg4jqmt440od","rs51fab4khga41gi","Slot 1","08:00:00"</sup></sub>
+<sub><sup>"rkwz02rbqi02i7nk","rs51fab4khga41gi","Slot 2","08:00:00"</sup></sub>
+<sub><sup>"8npy4z9sdelyb3r5","rs51fab4khga41gi","Slot 3","08:00:00"</sup></sub>
+<sub><sup>...</sup></sub>
+<sub><sup>"frjh5qawz492smsb","rs51fab4khga41gi","Slot 14","08:00:00"</sup></sub>
+<sub><sup>"5jy35ohkt8hq97ac","rs51fab4khga41gi","Slot 15","08:00:00"</sup></sub>
+<sub><sup>"4pgpp0am52tg7wvo","rs51fab4khga41gi","Slot 1","08:30:00"</sup></sub>
+<sub><sup>"jsnptduedakti4dl","rs51fab4khga41gi","Slot 2","08:30:00"</sup></sub>
+<sub><sup>...</sup></sub>
+<sub><sup>"2wvc3w3551jhdq6v","rs51fab4khga41gi","Slot 14","08:30:00"</sup></sub>
+<sub><sup>"uhayafyqrf5a8jmo","rs51fab4khga41gi","Slot 15","08:30:00"</sup></sub>
+<sub><sup>"n9bvkgggjxo7hhzb","rs51fab4khga41gi","Slot 1","09:00:00"</sup></sub>
+<sub><sup>"31pcnyb1q9z0fiaz","rs51fab4khga41gi","Slot 3","09:00:00"</sup></sub>
+<sub><sup>...</sup></sub>
+<sub><sup>"vs4u1v5swy13oov4","rs51fab4khga41gi","Slot 14","09:00:00"</sup></sub>
+<sub><sup>"3nl701m3bkvjmr02","rs51fab4khga41gi","Slot 15","09:00:00"</sup></sub>
 
 etc. if you want to change the number of slots per time, change the variable called *HOWMANYSLOTSPERTIME* in buildcsvfiles.csv. The general premise here is that you will create a list of the "times of day where you would then have NN slots for that time" and then update this csv file accordingly.
 
