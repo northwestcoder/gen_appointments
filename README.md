@@ -62,7 +62,7 @@ A simple list of times in military format. When you run this script, we generate
 "3nl701m3bkvjmr02","rs51fab4khga41gi","Slot 15","09:00:00"
 </pre>
 
-etc. if you want to change the number of slots per time, change the variable called **HOWMANYSLOTSPERTIME** in buildcsvfiles.csv. The general premise here is that you will create a list of the "times of day where this script will then generate NN slots for that time".
+etc. The Date field here is a foreign key reference to our dates table. if you want to change the number of slots per time, change the variable called **HOWMANYSLOTSPERTIME** in buildcsvfiles.csv. The general premise here is that you will create a list of the "times of day where this script will then generate NN slots for that time".
 
 ___
 
