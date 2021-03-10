@@ -18,9 +18,9 @@ This will generate
 
 The premise here is to then load up this data into a MySQL database or similar.
 
-We have also provided a .sql file to create these tables, as well as *one single DB trigger*.
+We have also provided sql create statements in db.sql file to create these tables, as well as one single trigger in file trigger.sql
 
-If you are running this MySQL database in a cloud environment, you will need to set a super user flag:
+If you are running this MySQL database in a cloud environment, you will need to set a super user flag in order to create the trigger:
 
 `log_bin_trust_function_creators = ON`
 
@@ -32,17 +32,17 @@ There are "input files" in the input directory driving the csv generation, as fo
 
 *input/hospitals.csv*
 
-A selection of fields from medicare.gov data - all we are interested in is Name, Address, County. There's more you could do here of course. In our data model we end up with these fields: "Key","Name","Description","Image","Address","LatLong"
+A selection of fields from medicare.gov data - all we are interested in is Name, Address, County. There's more you could do here of course. In our data model we end up with these fields: "Key","Name","Description","Image","Address","LatLong". The premise here is to come up with your own list of facilities and update this file accordingly.
 
 *input/dates.csv*
 
-A newline-list of dates with a trailing quotation (lame). These are the dates you want to make available to your audience. In our data model we end up with these fields: "Key","Location","Name"
-(Name is the string representation of the date, location is a foreign key reference to locations.csv)
+A newline-list of dates with a trailing quotation (lame). These are the dates you want to make available to your audience. In our data model we end up with these fields: "Key","Location","Name" (Name is the string representation of the date, location is a foreign key reference to locations.csv) The premise here is that you will pick your own range of dates and then update this file accordingly.
 
 *input/times.csv*
 
 A newline-list of times with a trailing quotation (lame). When you run this script, we generate 15 timeslots for each time listed in input/times.csv and in our output times.csv file the data will look like:
 
+<sub><sup>
 "Key","Date","Name","Times"
 "rgwhkg4jqmt440od","rs51fab4khga41gi","Slot 1","08:00:00"
 "rkwz02rbqi02i7nk","rs51fab4khga41gi","Slot 2","08:00:00"
@@ -61,9 +61,11 @@ A newline-list of times with a trailing quotation (lame). When you run this scri
 ...
 "vs4u1v5swy13oov4","rs51fab4khga41gi","Slot 14","09:00:00"
 "3nl701m3bkvjmr02","rs51fab4khga41gi","Slot 15","09:00:00"
+</sup></sub>
 
-etc. if you want to change the number of slots per time, change the variable called HOWMANYSLOTSPERTIME in buildcsvfiles.csv
+etc. if you want to change the number of slots per time, change the variable called *HOWMANYSLOTSPERTIME* in buildcsvfiles.csv. The general premise here is that you will create a list of the "times of day where you would then have NN slots for that time" and then update this csv file accordingly.
 
+___
 
 If you get this all working, now you can copy this [Sample Appsheet App](https://www.appsheet.com) and then change the table connections to point to your MySQL tables. Everything should work on this step with no changes to the app.
 
