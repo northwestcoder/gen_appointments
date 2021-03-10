@@ -30,7 +30,6 @@ def createData() -> str:
 	rowcount = 0
 	for newrow in range(len(locations.df_hospitals)):
 		newrow = ""
-		geolocation_bundle = locations.handlerMap("geolocation_bundle")
 		hospital_bundle = locations.df_hospitals[rowcount].split(',')
 		newlocationid = locations.handlerMap("Key")
 
@@ -59,12 +58,12 @@ def createData() -> str:
 		for item in range(len(locations.df_dates)):
 			daterowcount = 0 
 			newdatekey = locations.handlerMap("Key")
-			listofnewdates += quote + newdatekey + quotecomma + quote + newlocationid + quotecomma + quote + locations.df_dates[item]
+			listofnewdates += quote + newdatekey + quotecomma + quote + newlocationid + quotecomma + quote + locations.df_dates[item].strip('\n') + quote + newline
 			for item in range(len(locations.df_times)):
 				timerowcount = 0
 				for timeitem in range(HOWMANYSLOTSPERTIME):
 					newtimekey = locations.handlerMap("Key")			
-					listofnewtimes += quote + newtimekey + quotecomma + quote + newdatekey + quotecomma + quote + 'Slot ' + str(timeitem + 1) + quotecomma + quote + locations.df_times[item]
+					listofnewtimes += quote + newtimekey + quotecomma + quote + newdatekey + quotecomma + quote + 'Slot ' + str(timeitem + 1) + quotecomma + quote + locations.df_times[item].strip('\n') + quote + newline
 
 		rowcount+=1
 

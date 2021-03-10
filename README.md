@@ -36,11 +36,11 @@ A selection of fields from medicare.gov data - all we are interested in is Name,
 
 *input/dates.csv*
 
-A newline-list of dates with a trailing quotation (lame). These are the dates you want to make available to your audience. In our data model we end up with these fields: "Key","Location","Name" (Name is the string representation of the date, location is a foreign key reference to locations.csv) The premise here is that you will pick your own range of dates and then update this file accordingly.
+A simple list of dates. These are the dates you want to make available to your audience. In our data model we end up with these fields: "Key","Location","Name" (Name is the string representation of the date, location is a foreign key reference to locations.csv) The premise here is that you will pick your own range of dates and then update this file accordingly.
 
 *input/times.csv*
 
-A newline-list of times with a trailing quotation (lame). When you run this script, we generate 15 timeslots for each time listed in input/times.csv and in our output times.csv file the data will look like:
+A simple list of times in military format. When you run this script, we generate 15 timeslots for each time listed in input/times.csv and in our output times.csv file the data will look like:
 
 <sub><sup>"Key","Date","Name","Times"</sup></sub>
 <sub><sup>"rgwhkg4jqmt440od","rs51fab4khga41gi","Slot 1","08:00:00"</sup></sub>
