@@ -52,3 +52,10 @@ CREATE TABLE `Location` (
   `LatLong` varchar(90) DEFAULT NULL,
   PRIMARY KEY (`Key`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+CREATE TABLE `Preferences` (
+  `Email` varchar(300) NOT NULL,
+  `Search` varchar(30) DEFAULT NULL,
+  PRIMARY KEY (`Email`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
