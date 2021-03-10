@@ -4,7 +4,7 @@ GENERATE LOCATIONS, DATES, AND DATE TIMES for appointment scheduling
 
 This script generates three csv files which are then meant to be loaded into a database, and from there used by a web application to allow an unknown quantity of public participants to select a time slot from the pool of available timeslots. We also include a simple database trigger which prevents locking contention or race conditions in one of the tables, "Bookings". E.g. this model solves for vaccine signups, or other public-facing situations where people need to grab time slots.
 
-This is all quite low tech and quite by design. The goal here is to rapidly deploy without the need for complex web layers, react, full duplex traffic, API's and so forth. The primary candidate web app for this data model is [Appsheet](https://www.appsheet.com)
+This is all quite low tech and quite by design. The goal here is to rapidly deploy without the need for complex web layers, react, full duplex traffic, API's and so forth. The primary candidate web app for this data model is [Appsheet](https://www.appsheet.com).
 
 from a command line, run:
 
