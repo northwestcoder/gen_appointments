@@ -64,7 +64,7 @@ etc. if you want to change the number of slots per time, change the variable cal
 
 ___
 
-If you get this all working, now you can copy this [Sample Appsheet App](https://www.appsheet.com) and then change the table connections to point to your MySQL tables. Everything should work on this step with no changes to the app.
+If you get this all working, now you can copy this [Sample Appsheet App](https://www.appsheet.com/samples/empty-template-meant-to-be-copied-per-the-instructions?appGuidString=3c165865-b012-4cf5-bbda-83ab62646c0f) and then change the table connections to point to your MySQL tables. Everything should work on this step with basically no changes to the app.
 
 
 
