@@ -32,35 +32,37 @@ There are "input files" in the input directory driving the csv generation, as fo
 
 *input/hospitals.csv*
 
-A selection of fields from medicare.gov data - all we are interested in is Name, Address, County. There's more you could do here of course. In our data model we end up with these fields: "Key","Name","Description","Image","Address","LatLong". The premise here is to come up with your own list of facilities and update this file accordingly.
+A selection of hospitals and some of their columns/fields from medicare.gov data - all we are interested in is Name and Address. There's more you could do here of course. In our data model we end up with these fields: "Key","Name","Description","Image","Address","LatLong". The premise here is to come up with your own list of facilities and update this csv file accordingly.
 
 *input/dates.csv*
 
-A simple list of dates. These are the dates you want to make available to your audience. In our data model we end up with these fields: "Key","Location","Name" (Name is the string representation of the date, location is a foreign key reference to locations.csv) The premise here is that you will pick your own range of dates and then update this file accordingly.
+A simple list of dates. These are the dates you want to make available to your audience. In our data model we end up with these fields: "Key","Location","Name". Name is the string representation of the date and Location is a foreign key reference to locations.csv. The premise here is that you will pick your own range of dates and then update this csv file accordingly.
 
 *input/times.csv*
 
 A simple list of times in military format. When you run this script, we generate 15 timeslots for each time listed in input/times.csv and in our output times.csv file the data will look like:
 
-<sub><sup>"Key","Date","Name","Times"</sup></sub>
-<sub><sup>"rgwhkg4jqmt440od","rs51fab4khga41gi","Slot 1","08:00:00"</sup></sub>
-<sub><sup>"rkwz02rbqi02i7nk","rs51fab4khga41gi","Slot 2","08:00:00"</sup></sub>
-<sub><sup>"8npy4z9sdelyb3r5","rs51fab4khga41gi","Slot 3","08:00:00"</sup></sub>
-<sub><sup>...</sup></sub>
-<sub><sup>"frjh5qawz492smsb","rs51fab4khga41gi","Slot 14","08:00:00"</sup></sub>
-<sub><sup>"5jy35ohkt8hq97ac","rs51fab4khga41gi","Slot 15","08:00:00"</sup></sub>
-<sub><sup>"4pgpp0am52tg7wvo","rs51fab4khga41gi","Slot 1","08:30:00"</sup></sub>
-<sub><sup>"jsnptduedakti4dl","rs51fab4khga41gi","Slot 2","08:30:00"</sup></sub>
-<sub><sup>...</sup></sub>
-<sub><sup>"2wvc3w3551jhdq6v","rs51fab4khga41gi","Slot 14","08:30:00"</sup></sub>
-<sub><sup>"uhayafyqrf5a8jmo","rs51fab4khga41gi","Slot 15","08:30:00"</sup></sub>
-<sub><sup>"n9bvkgggjxo7hhzb","rs51fab4khga41gi","Slot 1","09:00:00"</sup></sub>
-<sub><sup>"31pcnyb1q9z0fiaz","rs51fab4khga41gi","Slot 3","09:00:00"</sup></sub>
-<sub><sup>...</sup></sub>
-<sub><sup>"vs4u1v5swy13oov4","rs51fab4khga41gi","Slot 14","09:00:00"</sup></sub>
-<sub><sup>"3nl701m3bkvjmr02","rs51fab4khga41gi","Slot 15","09:00:00"</sup></sub>
+<pre>
+"Key","Date","Name","Times"
+"rgwhkg4jqmt440od","rs51fab4khga41gi","Slot 1","08:00:00"
+"rkwz02rbqi02i7nk","rs51fab4khga41gi","Slot 2","08:00:00"
+"8npy4z9sdelyb3r5","rs51fab4khga41gi","Slot 3","08:00:00"
+...
+"frjh5qawz492smsb","rs51fab4khga41gi","Slot 14","08:00:00"
+"5jy35ohkt8hq97ac","rs51fab4khga41gi","Slot 15","08:00:00"
+"4pgpp0am52tg7wvo","rs51fab4khga41gi","Slot 1","08:30:00"
+"jsnptduedakti4dl","rs51fab4khga41gi","Slot 2","08:30:00"
+...
+"2wvc3w3551jhdq6v","rs51fab4khga41gi","Slot 14","08:30:00"
+"uhayafyqrf5a8jmo","rs51fab4khga41gi","Slot 15","08:30:00"
+"n9bvkgggjxo7hhzb","rs51fab4khga41gi","Slot 1","09:00:00"
+"31pcnyb1q9z0fiaz","rs51fab4khga41gi","Slot 3","09:00:00"
+...
+"vs4u1v5swy13oov4","rs51fab4khga41gi","Slot 14","09:00:00"
+"3nl701m3bkvjmr02","rs51fab4khga41gi","Slot 15","09:00:00"
+</pre>
 
-etc. if you want to change the number of slots per time, change the variable called *HOWMANYSLOTSPERTIME* in buildcsvfiles.csv. The general premise here is that you will create a list of the "times of day where you would then have NN slots for that time" and then update this csv file accordingly.
+etc. if you want to change the number of slots per time, change the variable called **HOWMANYSLOTSPERTIME** in buildcsvfiles.csv. The general premise here is that you will create a list of the "times of day where this script will then generate NN slots for that time".
 
 ___
 
