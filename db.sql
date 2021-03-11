@@ -10,6 +10,7 @@ CREATE TABLE `Bookings` (
   UNIQUE KEY `CompositeKey_UNIQUE` (`CompositeKey`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+
 CREATE TABLE `Completions` (
   `CompositeKey` varchar(300) NOT NULL,
   `LocationKey` varchar(300) DEFAULT NULL,
@@ -25,7 +26,6 @@ CREATE TABLE `Completions` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 
-DROP TABLE IF EXISTS `Date`;
 CREATE TABLE `Date` (
   `Key` varchar(300) NOT NULL,
   `Location` varchar(150) DEFAULT NULL,
@@ -57,5 +57,11 @@ CREATE TABLE `Location` (
 CREATE TABLE `Preferences` (
   `Email` varchar(300) NOT NULL,
   `Search` varchar(30) DEFAULT NULL,
+  `ELIG01` varchar(10) DEFAULT NULL,
+  `ELIG02` varchar(10) DEFAULT NULL,
+  `ELIG03` varchar(90) DEFAULT NULL,
+  `ELIG04` varchar(90) DEFAULT NULL,
+  `ELIG05` varchar(90) DEFAULT NULL,
   PRIMARY KEY (`Email`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
