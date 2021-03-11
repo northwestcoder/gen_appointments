@@ -66,7 +66,11 @@ etc. The Date field here is a foreign key reference to our dates table. if you w
 
 ___
 
-If you get this all working, now you can copy this [Sample Appsheet App](https://www.appsheet.com/samples/empty-template-meant-to-be-copied-per-the-instructions?appGuidString=3c165865-b012-4cf5-bbda-83ab62646c0f) and then change the table connections to point to your MySQL tables. Everything should work on this step with basically no changes to the app.
+If you get this all working, now you can copy this [Sample Appsheet App](https://www.appsheet.com/samples/empty-template-meant-to-be-copied-per-the-instructions?appGuidString=3c165865-b012-4cf5-bbda-83ab62646c0f) and then change the table connections to point to your MySQL tables. Everything should work on this step with basically only one important change to the app:
 
+- We have a single view **available_times** inside of the view.sql file. 
+- This view needs to be run and created on your database.
+- Then, in appsheet, when it comes time to replace the google sheet connections with your new table connections, for the Appsheet data source called "Datetime" you need to choose this view, as opposed to the table underneath it.
+- This makes it so that the end users will only receive from Appsheet *available* time slots, as opposed to all of them.
 
 
