@@ -74,3 +74,5 @@ If you get this all working, now you can copy this [Sample Appsheet App](https:/
 - This makes it so that the end users will only receive from Appsheet *available* time slots, as opposed to all of them.
 
 
+
+.
