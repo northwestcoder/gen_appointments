@@ -72,6 +72,3 @@ If you get this all working, now you can copy this [Sample Appsheet App](https:/
 - This view needs to be run and created on your database.
 - Then, in appsheet, when it comes time to replace the google sheet connections with your new table connections, for the Appsheet data source called "Datetime" you need to choose this view, as opposed to the table underneath it.
 - This makes it so that the end users will only receive from Appsheet *available* time slots, as opposed to all of them.
-
-
-.
